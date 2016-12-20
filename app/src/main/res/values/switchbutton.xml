@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_color">#6639B6</color>
+
+    <!--colors-->
+    <color name="ksw_md_ripple_normal">#1E000000</color>
+    <color name="ksw_md_ripple_checked">#336639B6</color>
+    <color name="ksw_md_solid_shadow">#33000000</color>
+    <color name="ksw_md_solid_normal">#BABABA</color>
+    <color name="ksw_md_solid_checked">@color/main_color</color>
+    <color name="ksw_md_solid_disable">#FFFFFF</color>
+    <color name="ksw_md_solid_checked_disable">#aaaaaa</color>
+    <color name="common_pink_text">#00BE8E</color>
+    <color name="common_pink_button">@color/main_color</color>
+    <color name="common_pink_button_press">@color/main_color</color>
+    <color name="common_pink_button_nav">@color/main_color</color>
+    <color name="common_pink_button_alpha">#226639B6</color>
+    <color name="common_gary_disabled">#d3d3d3</color>
+    <color name="common_gary_text">#b2b2b2</color>
+    <color name="common_title_disabled">#cccccc</color>
+    <color name="common_title_enable">#000000</color>
+    <color name="common_title_pink">#00BE8E</color>
+    <color name="common_dialog_text">#ffffff</color>
+
+    <!--dimens-->
+    <dimen name="ksw_md_thumb_ripple_size">42dp</dimen>
+    <dimen name="ksw_md_thumb_solid_inset">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset_top">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset_bottom">10dp</dimen>
+    <dimen name="ksw_md_thumb_solid_size">20dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_size">21dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_offset">2dp</dimen>
+
+    <!--attrs-->
+    <declare-styleable name="SwitchButton">
+        <attr name="kswThumbDrawable" format="reference"/>
+        <attr name="kswThumbColor" format="color|reference"/>
+        <attr name="kswThumbMargin" format="dimension|reference"/>
+        <attr name="kswThumbMarginTop" format="dimension|reference"/>
+        <attr name="kswThumbMarginBottom" format="dimension|reference"/>
+        <attr name="kswThumbMarginLeft" format="dimension|reference"/>
+        <attr name="kswThumbMarginRight" format="dimension|reference"/>
+        <attr name="kswThumbWidth" format="dimension|reference"/>
+        <attr name="kswThumbHeight" format="dimension|reference"/>
+        <attr name="kswThumbRadius" format="dimension|reference"/>
+        <attr name="kswBackRadius" format="dimension|reference"/>
+        <attr name="kswBackDrawable" format="reference"/>
+        <attr name="kswBackColor" format="color|reference"/>
+        <attr name="kswFadeBack" format="boolean"/>
+        <attr name="kswBackMeasureRatio" format="float"/>
+        <attr name="kswAnimationDuration" format="integer"/>
+        <attr name="kswTintColor" format="color|reference"/>
+        <attr name="kswTextOn" format="string"/>
+        <attr name="kswTextOff" format="string"/>
+        <attr name="kswTextMarginH" format="dimension"/>
+    </declare-styleable>
+
+    <style name="SwitchbuttonMD">
+        <item name="kswThumbDrawable">@drawable/ksw_md_thumb</item>
+        <item name="kswBackColor">@color/ksw_md_back_color</item>
+        <item name="kswBackMeasureRatio">1.6</item>
+        <item name="kswThumbMarginLeft">-16dp</item>
+        <item name="kswThumbMarginTop">-16dp</item>
+        <item name="kswThumbMarginRight">-16dp</item>
+        <item name="kswThumbMarginBottom">-16dp</item>
+    </style>
+
+    <style name="SwitchButtonStyleMD" parent="SwitchbuttonMD">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+</resources>

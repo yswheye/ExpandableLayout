@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yswheye.expandable.view.ExpandableLayout
+            android:id="@+id/expandableview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:collapseDrawable="@drawable/arrow_right"
+            app:expandDrawable="@drawable/arrow_down"
+            app:isCollapse="true"
+            app:titleHeight="60dp"
+            app:titleIcon="@drawable/fwxinxi"
+            app:titleName="标题1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dddddd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_text"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fengjing"/>
+            </LinearLayout>
+        </com.yswheye.expandable.view.ExpandableLayout>
+
+        <com.yswheye.expandable.view.ExpandableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isCollapse="true"
+            app:mtextRight="小标题2"
+            app:mtextRightColor="@color/color_909090"
+            app:titleHeight="60dp"
+            app:titleIcon="@drawable/fwxinxi"
+            app:titleName="标题2"
+            app:titleNameColor="@color/colorAccent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dddddd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_text"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fengjing"/>
+            </LinearLayout>
+        </com.yswheye.expandable.view.ExpandableLayout>
+
+        <com.yswheye.expandable.view.ExpandableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:collapseDrawable="@drawable/arrow_right"
+            app:expandDrawable="@drawable/arrow_down"
+            app:isCollapse="true"
+            app:titleHeight="60dp"
+            app:titleName="标题3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dddddd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_text"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fengjing"/>
+            </LinearLayout>
+        </com.yswheye.expandable.view.ExpandableLayout>
+
+        <com.yswheye.expandable.view.ExpandableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isCollapse="true"
+            app:mtextRight="小标题4"
+            app:mtextRightColor="@color/color_909090"
+            app:titleHeight="60dp"
+            app:titleName="标题4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dddddd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_text"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fengjing"/>
+            </LinearLayout>
+        </com.yswheye.expandable.view.ExpandableLayout>
+
+        <com.yswheye.expandable.view.ExpandableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isCollapse="true"
+            app:mdisplaySwitch="true"
+            app:titleHeight="60dp"
+            app:titleIcon="@drawable/fwxinxi"
+            app:titleName="标题5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dddddd"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_text"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fengjing"/>
+            </LinearLayout>
+        </com.yswheye.expandable.view.ExpandableLayout>
+    </LinearLayout>
+</ScrollView>

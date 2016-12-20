@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SettingView">
+        <attr name="pic" format="reference" />
+        <attr name="textLeft" format="string" localization="suggested" />
+        <attr name="textLeftColor" format="color" />
+        <attr name="textLeftSize" format="dimension" />
+        <attr name="textRight" format="string" localization="suggested" />
+        <attr name="textRightColor" format="color" />
+        <attr name="textRightSize" format="dimension" />
+        <attr name="displayArrow" format="boolean" />
+        <attr name="displaySwitch" format="boolean" />
+        <attr name="dividerVisibility" format="boolean" />
+    </declare-styleable>
+
+</resources>
