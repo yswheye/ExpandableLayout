@@ -2,21 +2,21 @@
 <resources>
 
     <declare-styleable name="ExpandableLayout">
-        <attr name="titleHeight" format="dimension" />
-        <attr name="titleBgColor" format="color" />
-        <attr name="titleName" format="string" />
-        <attr name="titleNameColor" format="color" />
+        <attr name="titleHeight" format="dimension|reference" />
+        <attr name="titleBgColor" format="color|reference" />
+        <attr name="titleName" format="string|reference" />
+        <attr name="titleNameColor" format="color|reference" />
         <attr name="titleNameSize" format="dimension|reference" />
-        <attr name="titleIcon" format="reference" />
+        <attr name="titleIcon" format="reference|reference" />
 
         <attr name="animDuration" format="integer" />
         <attr name="expandDrawable" format="reference" />
         <attr name="collapseDrawable" format="reference" />
         <attr name="isCollapse" format="boolean" />
 
-        <attr name="mtextRight" format="string" localization="suggested" />
-        <attr name="mtextRightColor" format="color" />
-        <attr name="mtextRightSize" format="dimension" />
+        <attr name="mtextRight" format="string|reference" localization="suggested" />
+        <attr name="mtextRightColor" format="color|reference" />
+        <attr name="mtextRightSize" format="dimension|reference" />
         <attr name="mdisplayArrow" format="boolean" />
         <attr name="mdisplaySwitch" format="boolean" />
         <attr name="mdividerVisibility" format="boolean" />

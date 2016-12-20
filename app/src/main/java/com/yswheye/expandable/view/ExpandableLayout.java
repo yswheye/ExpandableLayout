@@ -17,18 +17,17 @@ import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.yswheye.expandable.R;
+import com.yswheye.expandable.utils.DisplayUtil;
 
 
 public class ExpandableLayout extends LinearLayout implements View.OnClickListener {
     private Context mContext;
 
     private static final int DEFAULT_ANIM_DURATION = 300;
-    protected ImageView mArrowImg; // Button to expand/collapse
     private boolean mCollapsed = true; // Show short version as default.
     private boolean isCollapsed = true; // 是否折叠
 
@@ -182,8 +181,8 @@ public class ExpandableLayout extends LinearLayout implements View.OnClickListen
         titleView.setDisplaySwitch(typedArray.getBoolean(R.styleable.ExpandableLayout_mdisplaySwitch, false));
         titleView.getmTextLeft().setTextColor(typedArray.getColor(R.styleable.ExpandableLayout_titleNameColor, Color.BLACK));
         titleView.getmTextRight().setTextColor(typedArray.getColor(R.styleable.ExpandableLayout_mtextRightColor, Color.BLACK));
-        titleView.getmTextLeft().setTextSize(TypedValue.COMPLEX_UNIT_SP, typedArray.getDimension(R.styleable.ExpandableLayout_titleNameSize, 16));
-        titleView.getmTextRight().setTextSize(TypedValue.COMPLEX_UNIT_SP, typedArray.getDimension(R.styleable.ExpandableLayout_mtextRightSize, 14));
+        titleView.getmTextLeft().setTextSize(TypedValue.COMPLEX_UNIT_PX, typedArray.getDimension(R.styleable.ExpandableLayout_titleNameSize, DisplayUtil.sp2px(mContext, 16)));
+        titleView.getmTextRight().setTextSize(TypedValue.COMPLEX_UNIT_PX, typedArray.getDimension(R.styleable.ExpandableLayout_mtextRightSize, DisplayUtil.sp2px(mContext, 16)));
         titleView.getDivider().setVisibility(typedArray.getBoolean(R.styleable.ExpandableLayout_mdividerVisibility, true) ? VISIBLE : GONE);
         setTitleArrow();
 

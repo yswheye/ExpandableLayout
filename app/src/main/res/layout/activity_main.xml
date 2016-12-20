@@ -76,7 +76,8 @@
             app:expandDrawable="@drawable/arrow_down"
             app:isCollapse="true"
             app:titleHeight="60dp"
-            app:titleName="标题3">
+            app:titleName="标题3"
+            app:titleNameSize="18sp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -131,6 +132,7 @@
             app:isCollapse="true"
             app:mdisplaySwitch="true"
             app:titleHeight="60dp"
+            app:titleNameSize="16sp"
             app:titleIcon="@drawable/fwxinxi"
             app:titleName="标题5">
 
@@ -152,5 +154,12 @@
                     android:src="@drawable/fengjing"/>
             </LinearLayout>
         </com.yswheye.expandable.view.ExpandableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="@string/str_text"/>
     </LinearLayout>
 </ScrollView>
