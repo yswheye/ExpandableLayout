@@ -1,31 +1,45 @@
 # ExpandableLayout
 android ExpandableLayout能够让子View隐藏和展开，伸缩菜单
 
-<img src="./GIF.gif"/>
+<img src="./pics/pic1"/>
+<img src="./pics/pic2"/>
 
 ```
- <com.limxing.expandableview.view.ExpandableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        expandableView:viewTitle="我是标题"
-        expandableView:viewTitleSize="15sp"
-        expandableView:viewTitleImage="@drawable/fwxinxi">
-        
-        <..anything you want../>
-</com.limxing.expandableview.view.ExpandableLayout>
+<attr name="titleHeight" format="dimension" />
+        <attr name="titleBgColor" format="color" />
+        <attr name="titleName" format="string" />
+        <attr name="titleNameColor" format="color" />
+        <attr name="titleNameSize" format="dimension|reference" />
+        <attr name="titleIcon" format="reference" />
 
+        <attr name="animDuration" format="integer" />
+        <attr name="expandDrawable" format="reference" />
+        <attr name="collapseDrawable" format="reference" />
+        <attr name="isCollapse" format="boolean" />
+
+        <attr name="mtextRight" format="string" localization="suggested" />
+        <attr name="mtextRightColor" format="color" />
+        <attr name="mtextRightSize" format="dimension" />
+        <attr name="mdisplayArrow" format="boolean" />
+        <attr name="mdisplaySwitch" format="boolean" />
+        <attr name="mdividerVisibility" format="boolean" />
 ```
 
-Attributes：
-```
-      <attr name="viewTitleShow" format="boolean" />  默认展开还是隐藏
-      <attr name="viewTitleColor" format="color" />   标题颜色
-      <attr name="viewTitleSize" format="dimension" />标题大小
-      <attr name="viewTitleLineColor" format="color" />分割线颜色
-      <attr name="viewTitleBacColor" format="color" />背景色
-      <attr name="viewTitleImage" format="reference" />标题前面的图片
-      <attr name="animDuration" format="integer" /> 动画时长
-      <attr name="expandDrawable" format="reference" />右侧三角自定义图片
-      <attr name="collapseDrawable" format="reference" />右侧三角自定义图片
-```
+| 属性 | 释义 |
+|--------|--------|
+|    titleHeight    |    title高度    |
+|    titleBgColor    |    title背景色    |
+|    titleName    |    title标题    |
+|    titleNameColor    |    title标题颜色    |
+|    titleNameSize    |    title标题字体大小    |
+|    titleIcon    |    title图标    |
+|    animDuration    |    收缩动画时间    |
+|    expandDrawable    |    title展开时右图标    |
+|    collapseDrawable    |    title折叠时右图标    |
+|    isCollapse    |    title是否折叠    |
+|    mtextRight    |    title右标题    |
+|    mtextRightColor    |    title右标题颜色    |
+|    mtextRightSize    |    title右标题字体大小    |
+|    mdisplayArrow    |    是否显示右图标    |
+|    mdisplaySwitch    |    是否显示开关    |
+|    mdividerVisibility    |    是否显示分割线    |
