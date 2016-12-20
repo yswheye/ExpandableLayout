@@ -43,3 +43,18 @@ android ExpandableLayout能够让子View隐藏和展开，伸缩菜单
 |    mdisplayArrow    |    是否显示右图标    |
 |    mdisplaySwitch    |    是否显示开关    |
 |    mdividerVisibility    |    是否显示分割线    |
+
+**监听展开与折叠**
+```
+expandableLayout.setOnExpandStateChangeListener(new ExpandableLayout.OnExpandStateChangeListener() {
+            @Override
+            public void onExpandStateChanged(boolean isExpanded) {
+                if (isExpanded) {
+                    Toast.makeText(MainActivity.this, "展开", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "折叠", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+```

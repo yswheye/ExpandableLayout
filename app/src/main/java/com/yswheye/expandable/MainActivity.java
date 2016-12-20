@@ -7,14 +7,14 @@ import android.widget.Toast;
 import com.yswheye.expandable.view.ExpandableLayout;
 
 public class MainActivity extends AppCompatActivity {
-    ExpandableLayout expandableView;
+    ExpandableLayout expandableLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        expandableView = (ExpandableLayout) findViewById(R.id.expandableview1);
-        expandableView.setOnExpandStateChangeListener(new ExpandableLayout.OnExpandStateChangeListener() {
+        expandableLayout = (ExpandableLayout) findViewById(R.id.expandableview1);
+        expandableLayout.setOnExpandStateChangeListener(new ExpandableLayout.OnExpandStateChangeListener() {
             @Override
             public void onExpandStateChanged(boolean isExpanded) {
                 if (isExpanded) {
