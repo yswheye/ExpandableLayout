@@ -2,19 +2,24 @@ package com.yswheye.expandable;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yswheye.expandable.view.ExpandableLayout;
 
 public class MainActivity extends AppCompatActivity {
-    ExpandableLayout expandableLayout;
+    ExpandableLayout expandableLayout1;
+    ExpandableLayout expandableLayout2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        expandableLayout = (ExpandableLayout) findViewById(R.id.expandableview1);
-        expandableLayout.setOnExpandStateChangeListener(new ExpandableLayout.OnExpandStateChangeListener() {
+        expandableLayout1 = (ExpandableLayout) findViewById(R.id.expandableview1);
+        expandableLayout2 = (ExpandableLayout) findViewById(R.id.expandableview2);
+        expandableLayout1.setOnExpandStateChangeListener(new ExpandableLayout.OnExpandStateChangeListener() {
             @Override
             public void onExpandStateChanged(boolean isExpanded) {
                 if (isExpanded) {
@@ -24,5 +29,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        TextView textView = new TextView(this);
+        textView.setTextSize(28);
+        textView.setText("O(∩_∩)O哈哈~");
+        textView.setGravity(Gravity.CENTER);
+        textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300));
+        expandableLayout2.addView(textView);
     }
 }

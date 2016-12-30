@@ -6,23 +6,23 @@ android ExpandableLayout能够让子View隐藏和展开，伸缩菜单
 
 ```
 <attr name="titleHeight" format="dimension" />
-        <attr name="titleBgColor" format="color" />
-        <attr name="titleName" format="string" />
-        <attr name="titleNameColor" format="color" />
-        <attr name="titleNameSize" format="dimension|reference" />
-        <attr name="titleIcon" format="reference" />
+<attr name="titleBgColor" format="color" />
+<attr name="titleName" format="string" />
+<attr name="titleNameColor" format="color" />
+<attr name="titleNameSize" format="dimension|reference" />
+<attr name="titleIcon" format="reference" />
 
-        <attr name="animDuration" format="integer" />
-        <attr name="expandDrawable" format="reference" />
-        <attr name="collapseDrawable" format="reference" />
-        <attr name="isCollapse" format="boolean" />
+<attr name="animDuration" format="integer" />
+<attr name="expandDrawable" format="reference" />
+<attr name="collapseDrawable" format="reference" />
+<attr name="isCollapse" format="boolean" />
 
-        <attr name="mtextRight" format="string" localization="suggested" />
-        <attr name="mtextRightColor" format="color" />
-        <attr name="mtextRightSize" format="dimension" />
-        <attr name="mdisplayArrow" format="boolean" />
-        <attr name="mdisplaySwitch" format="boolean" />
-        <attr name="mdividerVisibility" format="boolean" />
+<attr name="mtextRight" format="string" localization="suggested" />
+<attr name="mtextRightColor" format="color" />
+<attr name="mtextRightSize" format="dimension" />
+<attr name="mdisplayArrow" format="boolean" />
+<attr name="mdisplaySwitch" format="boolean" />
+<attr name="mdividerVisibility" format="boolean" />
 ```
 
 | 属性 | 释义 |
@@ -47,14 +47,25 @@ android ExpandableLayout能够让子View隐藏和展开，伸缩菜单
 **监听展开与折叠**
 ```
 expandableLayout.setOnExpandStateChangeListener(new ExpandableLayout.OnExpandStateChangeListener() {
-            @Override
-            public void onExpandStateChanged(boolean isExpanded) {
-                if (isExpanded) {
-                    Toast.makeText(MainActivity.this, "展开", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity.this, "折叠", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
 
+        @Override
+        public void onExpandStateChanged(boolean isExpanded) {
+            if (isExpanded) {
+                Toast.makeText(MainActivity.this, "展开", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(MainActivity.this, "折叠", Toast.LENGTH_SHORT).show();
+            }
+        }
+});
+
+```
+
+**动态添加子VIEW**
+```
+TextView textView = new TextView(this);
+textView.setTextSize(28);
+textView.setText("O(∩_∩)O哈哈~");
+textView.setGravity(Gravity.CENTER);
+textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300));
+expandableLayout2.addView(textView);
 ```
