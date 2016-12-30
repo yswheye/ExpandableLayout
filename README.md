@@ -2,7 +2,8 @@
 android ExpandableLayout能够让子View隐藏和展开，伸缩菜单
 
 <img src="./pics/pic1.jpg"/>
-<img src="./pics/pic2.jpg"/>
+<img src="./pics/pic1.jpg"/>
+<img src="expandable.gif"/>
 
 ```
 <attr name="titleHeight" format="dimension" />

@@ -8,10 +8,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yswheye.expandable.view.ExpandableLayout;
+import com.yswheye.expandable.view.SettingView;
 
 public class MainActivity extends AppCompatActivity {
     ExpandableLayout expandableLayout1;
     ExpandableLayout expandableLayout2;
+    ExpandableLayout expandableLayout5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         expandableLayout1 = (ExpandableLayout) findViewById(R.id.expandableview1);
         expandableLayout2 = (ExpandableLayout) findViewById(R.id.expandableview2);
+        expandableLayout5 = (ExpandableLayout) findViewById(R.id.expandableview5);
         expandableLayout1.setOnExpandStateChangeListener(new ExpandableLayout.OnExpandStateChangeListener() {
             @Override
             public void onExpandStateChanged(boolean isExpanded) {
@@ -36,5 +39,12 @@ public class MainActivity extends AppCompatActivity {
         textView.setGravity(Gravity.CENTER);
         textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300));
         expandableLayout2.addView(textView);
+
+        expandableLayout5.getTitleView().setOnStateChangeListener(new SettingView.OnStateChangeListener() {
+            @Override
+            public void onStateChanged(SettingView view, boolean state) {
+                expandableLayout5.toggle();
+            }
+        });
     }
 }

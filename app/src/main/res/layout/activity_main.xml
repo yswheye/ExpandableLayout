@@ -109,6 +109,7 @@
         </com.yswheye.expandable.view.ExpandableLayout>
 
         <com.yswheye.expandable.view.ExpandableLayout
+            android:id="@+id/expandableview5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:isCollapse="true"

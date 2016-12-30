@@ -73,8 +73,16 @@ public class ExpandableLayout extends LinearLayout implements View.OnClickListen
         super.setOrientation(orientation);
     }
 
+    public SettingView getTitleView() {
+        return titleView;
+    }
+
     @Override
     public void onClick(View view) {
+        toggle();
+    }
+
+    public void toggle() {
         if (!mAnimating) {
             mCollapsed = !mCollapsed;
             setTitleArrow();
